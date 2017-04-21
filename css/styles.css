@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+/* ==== ANIMATIONS ==== */
+
+@keyframes buttonColor {
+    /* TODO: ADJUST COLORS AND PERCENTAGES TO SMOOTH OUT AND LOOK BETTER */
+    0%    {background: #E74C3C;}
+    50%   {background: orange;}
+    100%  {background: #E74C3C}
+}
+
+/* TODO: WRITE KEYFRAMES FOR BUTTON HOVER */
+
+
+/* ==== GLOBAL STYLES ==== */
+
+.btn-default {
+    padding: 25px 30px;
+	border: none;
+    border-radius: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: white;
+    text-shadow: 1px 1px 3px grey;
+    background: #E74C3C;
+    animation: buttonColor 3s infinite;
+    transition: all 2s;
+}
+
+.btn-default:hover {
+	color: white;
+    text-shadow: 1px 1px 2px black;
+    background: yellow;
+    animation: none;
+}
+
+
+#hero {
+    /* TODO: MAKE MEDIA QUERY TO CHANGE FOR LANDSCAPE */
+	height: 100vh;
+    background-image: url(../images/bg5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#heroImage {
+	width: 52%;
+    position: fixed;
+    align-self: flex-end;
+    bottom: -1px;
+    right: -20px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #fff;
+/*    font-family: 'Open Sans', sans-serif;*/
+/*    font-family: 'Oxygen', sans-serif;*/
+/*    font-family: 'Josefin Sans', sans-serif;*/
+/*    font-family: 'Poiret One', cursive;*/
+/*    font-family: 'Rock Salt', cursive;*/
+    font-family: 'Monoton', cursive;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-shadow: -2px 3px 3px #E74C3C;
+    letter-spacing: 2px;
+/*    line-height: 90%;*/
+    margin-top: 50px;
+}
+
+h3 {
+    font-family: 'Rock Salt', cursive;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
