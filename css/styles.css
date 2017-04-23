@@ -40,9 +40,10 @@ body, html {
 
 .navbar-inverse {
     /* TODO: FIND A BETTER COLOR FOR FOOTER */
-	background: darkgoldenrod;
+	background: #E74C3C;
     z-index: 0;
     border: none;
+    border-radius: 0;
 }
 
 .container {
@@ -50,7 +51,7 @@ body, html {
 }
 
 .lineUnder {
-    padding-bottom: 8px;
+    padding-bottom: 1px;
 	border-bottom: 5px solid black;
 }
 
@@ -111,6 +112,18 @@ section {
     padding: 100px 0;
 }
 
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+section p {
+    text-align: left;
+    line-height: 150%;
+    font-family: 'Raleway', sans-serif;
+}
+
 .services {
 	text-align: center;
     padding: 30px 20px;
@@ -120,32 +133,67 @@ section {
     padding-bottom: 10px;
 }
 
-.services p {
-    text-align: left;
-    line-height: 150%;
-}
-
 i {
     font-size: 2em;
     color: orangered;
 }
 
-#p1 {
-	background-image: url(../images/bg2.jpg);
-    background-position: center center;
+/* TODO: MAKE A MEDIA QUERY TO REMOVE THE PARALAX IMAGES FOR TABLET/MOBILE */
+
+.parallax {
+	background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: fixed;
     height: 300px;
 }
 
+#p1 {
+	background-image: url(../images/plax-1.jpeg);
+}
+
+#p2 {
+	background-image: url(../images/bg2.jpg);
+}
+
 #contact {
-	height: 500px;
+	height: 100%;
+    min-height: 500px;
     background-image: url(../images/bg5.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+#contact i {
+    margin: 0;
+    padding: 0;
+    color: darkgrey;
+}
+
+#contact a i.icon-github-2:hover {
+	color: #333;
+}
+
+
+
+
+
+/* ===== MEDIA QUERIES ===== */
+
+@media only screen and (max-width: 767px){
+    #heroImage {
+	    display: none;
+    }
+}
+
+
+
 
 
 
