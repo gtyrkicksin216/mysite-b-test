@@ -4,13 +4,15 @@ body, html {
     font-size: 100%;
 }
 
+/* TODO: COLLECT ALL COLORS FROM SHEET AND ADD THEM IN A BLOCK COMMENT */
+
 /* ==== ANIMATIONS ==== */
 
 @keyframes buttonColor {
     /* TODO: ADJUST COLORS AND PERCENTAGES TO SMOOTH OUT AND LOOK BETTER */
-    0%    {background: #E74C3C;}
-    50%   {background: orange;}
-    100%  {background: #E74C3C}
+    0%    {background: #ef4756;}
+    50%   {background-color: orange;}
+    100%  {background: #ef4756;}
 }
 
 /* TODO: WRITE KEYFRAMES FOR BUTTON HOVER */
@@ -18,7 +20,22 @@ body, html {
 
 /* ==== GLOBAL STYLES ==== */
 
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 .btn-default {
+    margin: 10px 0;
     padding: 25px 30px;
 	border: none;
     border-radius: 30px;
@@ -32,15 +49,38 @@ body, html {
 }
 
 .btn-default:hover {
-	color: white;
+	color: #fff;
     text-shadow: 1px 1px 2px black;
-    background: yellow;
+    background: orange;
     animation: none;
+}
+
+.btn-default:focus {
+	outline: none;
+}
+
+.btn-default:visited {
+    color: white;
+}
+
+.btn-success {
+	background: #ef4756;
+    border: none;
+    font-size: .8em;
+    min-height: 50px;
+}
+
+.btn-success:hover {
+	background: #ef4756;
+}
+
+.glyphicon-send {
+	color: #fff;
 }
 
 .navbar-inverse {
     /* TODO: FIND A BETTER COLOR FOR FOOTER */
-	background: #E74C3C;
+	background: #ef4756;
     z-index: 0;
     border: none;
     border-radius: 0;
@@ -53,6 +93,15 @@ body, html {
 .lineUnder {
     padding-bottom: 1px;
 	border-bottom: 5px solid black;
+}
+
+.modal-header {
+    border: none;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
 }
 
 
@@ -71,6 +120,10 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.mobile-image {
+	display: none;
 }
 
 #heroImage {
@@ -94,10 +147,10 @@ h1 {
     font-family: 'Monoton', cursive;
     font-weight: lighter;
     text-transform: uppercase;
-    text-shadow: -2px 3px 3px #E74C3C;
+    text-shadow: -2px 3px 3px #ef4756;
     letter-spacing: 2px;
 /*    line-height: 90%;*/
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 h3 {
@@ -135,7 +188,7 @@ section p {
 
 i {
     font-size: 2em;
-    color: orangered;
+    color: #ef4756;
 }
 
 /* TODO: MAKE A MEDIA QUERY TO REMOVE THE PARALAX IMAGES FOR TABLET/MOBILE */
@@ -170,13 +223,17 @@ i {
     justify-content: center;
 }
 
+#contact p {
+	text-align: center;
+}
+
 #contact i {
-    margin: 0;
+    margin: 0 10px;
     padding: 0;
     color: darkgrey;
 }
 
-#contact a i.icon-github-2:hover {
+#contact a i.icon-github-2:hover, #contact a i.glyphicon-phone-alt:hover {
 	color: #333;
 }
 
@@ -187,13 +244,26 @@ i {
 /* ===== MEDIA QUERIES ===== */
 
 @media only screen and (max-width: 767px){
+    .mobile-image {
+	    display: block;
+        margin: 10px auto;
+}
+    
     #heroImage {
 	    display: none;
     }
+    
+    .btn-default {
+        font-size: 1em;
+    }
 }
 
-
-
+/* ===== FIX FOR LANDSCAPE ISSUE ===== */
+@media (min-width: 700px) and (orientation: landscape){
+    #hero {
+        min-height: 520px;
+    }
+}
 
 
 
@@ -218,6 +288,8 @@ footer {
 footer p {
     margin: 0;
 }
+
+
 
 
 

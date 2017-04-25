@@ -18,7 +18,7 @@
         
         <!-- TODO: ADD FAVICON -->
         <!-- ======== FAVICON HERE ========= -->
-        <link rel="icon" type="image/png" href="#">
+        <link rel="icon" type="image/png" href="images/rw_fav_32_box.png">
         
         <!-- ======== GOOGLE FONTS ======== -->
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton|Open+Sans|Oxygen|Poiret+One|Rock+Salt" rel="stylesheet">
@@ -30,6 +30,9 @@
         
         <!-- FONTELLO ICONS -->
         <link rel="stylesheet" href="css/fontello.css">
+        
+        <!-- ===== ICOMOON ICONS ===== -->
+        <link rel="stylesheet" href="css/fonts.css">
         
         
         <!-- ======== HTML5 SHIM FOR STUPID BROWSERS ======== -->
@@ -53,9 +56,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-sm-8 col-xs-12">
+                        <img class="mobile-image img-responsive" src="images/mobile-photo-2.png" alt="Ryan Wood">
                         <h1>Ryan Wood</h1>
                         <h3>Web Designer &amp; Frontend Developer</h3>
-                        <h4 class="cta btn btn-default btn-lg" role="button">YOU CAN HIRE ME TODAY!</h4><!-- CALL TO ACTION BUTTON -->
+                        <a class="cta btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#contact-form">YOU CAN HIRE ME TODAY!</a><!-- CALL TO ACTION BUTTON -->
                     </div><!-- col-md-8 col-sm-8 col-xs-8 -->
                 </div><!-- row -->
             </div><!-- container -->
@@ -69,7 +73,9 @@
                     <div class="col-xs-12">
                         <h2>Hi, I'm Ryan. Nice to meet you!</h2>
                         <div class="col-md-8 col-md-offset-2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis saepe quia fugiat hic quaerat nihil itaque fuga omnis pariatur cumque quasi amet beatae facere modi corporis sint, accusantium obcaecati quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem consequatur tempore obcaecati, beatae, minus rem repudiandae? Deserunt quae repellendus voluptates, voluptatibus neque voluptatem recusandae voluptas vitae, labore libero. Distinctio, dolor.</p>
+                        <p>I am a freelance web designer &amp; developer located in Cleveland, Ohio. I help my clients grow their business by offering custom solutions for their web needs. If you would like to discuss how I can help you grow your business, simply click one of the contact buttons.</p>
+                        <br>
+                        <p>I look forward to hearing from you!</p>
                         </div><!-- col-md-6 col-md-offset-3 -->
                     </div><!-- col-xs-12 -->
                 </div><!-- row -->
@@ -89,14 +95,14 @@
                     </div><!-- col-sm-6 services -->
                     <div class="col-sm-6 services">
                         <h2><i class="icon-cogs"></i></h2>
-                        <h2>Frontend <span class="lineUnder">Development</span></h2>
+                        <h2><span class="lineUnder">Responsive</span> Design</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eum cumque nam cum praesentium eligendi architecto culpa blanditiis commodi aliquam maxime magnam, rerum explicabo excepturi deserunt voluptates dolores modi quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus beatae necessitatibus dicta sed, explicabo modi, dolorum inventore cumque in numquam ex. Nihil assumenda, doloremque, quaerat recusandae totam suscipit. Provident, quaerat.</p>
                     </div><!-- col-sm-6 services -->
                 </div><!-- row -->
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 services">
                         <h2><i class="icon-chart-alt-outline"></i></h2>
-                        <h2><span class="lineUnder">Anal</span>ytics</h2>
+                        <h2><span class="lineUnder">Marketing</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum blanditiis repellendus quo laboriosam quaerat perspiciatis, facere laudantium unde, modi, molestiae sint ea necessitatibus amet ut deserunt dicta ratione commodi animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur provident vel eveniet, obcaecati nam, voluptates, debitis quidem fuga assumenda qui ullam vitae cumque soluta molestiae labore doloremque, neque. Mollitia, explicabo.</p>
                     </div>
                 </div>
@@ -114,18 +120,52 @@
                     <span class="contact-button">
                         <a href="https://github.com/gtyrkicksin216" target="_blank"><i class="icon-github-2"></i></a>
                     </span>
+                    <span class="contact-button">
+                        <a href="tel:2165778453"><i class="glyphicon glyphicon-phone-alt"></i></a>
+                    </span>
                     <br>
-                    <h4 class="cta btn btn-default btn-lg" role="button" id="contact-bottom">I'm available for freelance work</h4>
-                </div>
-            </div>
-        </section>
+                    <a href="#" class="cta btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#contact-form">I'm available for freelance work.</a>
+                </div><!-- col-xs-12 -->
+            </div><!-- container contact-block -->
+        </section><!-- #contact -->
+        
+        <!-- ===== MODAL CONTACT FORM ===== -->
+        <div class="modal fade" id="contact-form" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                        <h2 class="modal-title">Let's talk!</h2>
+                        <small><em>&#40;We always try to reply within 24 hours&#41;</em></small>
+                    </div><!-- modal-header -->
+                    <div class="modal-body">
+                        <form action="https://formspree.io/ryan@uxbyrw.com" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input class="form-control" type="text" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input class="form-control" type="email" name="email" placeholder="Your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tell us about your project:</label>
+                                <textarea class="form-control" name="message" placeholder="Give me some details..." rows="5" cols="30" required></textarea>
+                            </div>
+                            <button class="btn btn-small btn-success form-control" type="submit" value="Send"><i class="glyphicon glyphicon-send"></i></button>
+                        </form>
+                    </div><!-- modal-body -->
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- #contact-form -->
+        
         
         
         <!-- TODO: ADD FOOTER WITH OHICON -->
         <!-- TODO: MAYBE PLACE THE NAV AT THE BOTTOM IN THE FOOTER -->
         <footer class="navbar-inverse">
            <div class="container-fluid">
-            <p>Made in <span></span> by RW Brand Studios &#124; UX by RW</p>
+            <p>Made in <span class="icon-ohicon"></span> by RW Brand Studios &#124; UX by RW</p>
            </div>
         </footer>
         
