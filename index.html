@@ -31,9 +31,6 @@
         <!-- FONTELLO ICONS -->
         <link rel="stylesheet" href="css/fontello.css">
         
-        <!-- ===== ICOMOON ICONS ===== -->
-        <link rel="stylesheet" href="css/fonts.css">
-        
         
         <!-- ======== HTML5 SHIM FOR STUPID BROWSERS ======== -->
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -54,16 +51,22 @@
         
         <div class="container-fluid" id="hero">
             <div class="container">
+              <!--
+               <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="index.html">home</a></li>
+                    <li role="presentation"><a href="#">portfolio</a></li>
+                </ul>
+                -->
                 <div class="row">
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <img class="mobile-image img-responsive" src="images/mobile-photo-2.png" alt="Ryan Wood">
                         <h1>Ryan Wood</h1>
                         <h3>Web Designer &amp; Frontend Developer</h3>
-                        <a class="cta btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#contact-form">FIND OUT HOW TO HIRE ME</a><!-- CALL TO ACTION BUTTON -->
+                        <a class="cta btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#contact-form">REQUEST A QUOTE</a><!-- CALL TO ACTION BUTTON -->
                     </div><!-- col-md-8 col-sm-8 col-xs-8 -->
                 </div><!-- row -->
             </div><!-- container -->
-            <img src="images/bg4-2.png" alt="Picture of Me" id="heroImage">
+            <img src="images/bg4-2.png" alt="Picture of Me" id="heroImage" alt="Ryan Wood">
         </div><!-- #hero -->
         
         <!-- TODO: ADD SHORT ABOUT ME SECTION AND I MEAN SHORT -->
@@ -104,8 +107,8 @@
                         <h2><i class="icon-chart-alt-outline"></i></h2>
                         <h2>Digital <span class="lineUnder">Marketing</span></h2>
                         <p>Do you already have a website that works for you, but you still need a way to grow your business? I will work with you to come up with a solution that fits your needs. From email campaigns to social media management, I offer options that will help you reach your goals.</p>
-                    </div>
-                </div>
+                    </div><!-- col-sm-6 col-sm-offset-3 services -->
+                </div><!-- row -->
             </div><!-- container -->
         </section><!-- #aboutme -->
         
@@ -114,6 +117,17 @@
         
         <div class="parallax" id="p2"></div>
         <!-- TODO: ADD CONTACT SECTION WITH FORM -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Portfolio coming soon... <span class="blinker">&#124;</span></h3>
+                    </div><!-- col-md-12 -->
+                </div><!-- row -->
+            </div><!-- container -->
+        </section><!-- #portfolio -->
+        
+        
         <section id="contact">
             <div class="container contact-block">
                 <div class="col-xs-12">
@@ -121,11 +135,13 @@
                     <span class="contact-button">
 <!--                        <a href="https://github.com/gtyrkicksin216" target="_blank"><i class="icon-github-2"></i></a>-->
                     </span>
+                    <!-- 
                     <span class="contact-button">
                         <a href="tel:2165778453"><i class="glyphicon glyphicon-phone-alt"></i></a>
                     </span>
+                    -->
                     <br>
-                    <a href="#" class="cta btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#contact-form">DROP ME A LINE</a>
+                    <a href="#" class="cta btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#contact-form">REQUEST A QUOTE</a>
                 </div><!-- col-xs-12 -->
             </div><!-- container contact-block -->
         </section><!-- #contact -->
@@ -141,7 +157,7 @@
                     </div><!-- modal-header -->
                     <div class="modal-body">
                         <!-- add this to the action when ready to make the form functional: https://formspree.io/ryan@uxbyrw.com -->
-                        <form action="" method="POST">
+                        <form action="//formspree.io/ryan@uxbyrw.com" method="POST" id="quote-form">
                             <div class="form-group">
                                 <label for="name">Name:</label>
                                 <div class="input-group">
@@ -150,10 +166,10 @@
                                 </div><!-- input-group -->
                             </div><!-- form-group -->
                             <div class="form-group">
-                                <label for="email">Email:</label>
+                                <label for="_replyto">Email:</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope help"></i></span>
-                                    <input class="form-control" type="email" name="email" placeholder="Your email" required>
+                                    <input class="form-control" type="email" name="_replyto" placeholder="Your email" required>
                                 </div><!-- input-group -->
                             </div><!-- form-group -->
                             <div class="form-group">
@@ -165,17 +181,16 @@
                             </div><!-- form-group -->
                             <div class="form-group">
                                 <label for="texting">Can I text you? &nbsp;</label>
-                                <form>
                                     <input type="radio" name="texting" value="N/A" checked> N &frasl; A &nbsp;
                                     <input type="radio" name="texting" value="Yes"> Yes &nbsp;
                                     <input type="radio" name="texting" value="No"> No
-                                </form>
                             </div>
                             <div class="form-group">
                                 <label for="message">Tell us about your project:</label>
-                                <textarea class="form-control" name="message" placeholder="Give me some details..." rows="3" cols="30" required></textarea>
+                                <textarea name="message" class="form-control" placeholder="Give me some details..." rows="3" cols="30" required></textarea>
                             </div>
-                            <button class="btn btn-small btn-success form-control" type="submit" value="Send"><i class="glyphicon glyphicon-send"></i></button>
+                            <input type="hidden" name="_next" value="//uxbyrw.com">
+                            <button type="submit" onclick="formSubmit()" class="btn btn-small btn-success form-control">Send</button>
                         </form>
                     </div><!-- modal-body -->
                 </div><!-- modal-content -->
@@ -210,6 +225,11 @@
         
         <!-- CUSTOM JS -->
         <script src="js/script.js" type="text/javascript"></script>
+        <script>
+            function formSubmit(){
+                document.getElementById('quote-form').submit();
+            }
+            </script>
         
         
         
