@@ -10,6 +10,14 @@ body, html {
 
 /* ==== ANIMATIONS ==== */
 
+@-webkit-keyframes buttonColor {
+    /* TODO: ADJUST COLORS AND PERCENTAGES TO SMOOTH OUT AND LOOK BETTER */
+    0%    {background: #ef4756;}
+    25%   {background: orangered;}
+    50%   {background: orange;}
+    75%   {background: orangered;}
+    100%  {background: #ef4756;}
+}
 @keyframes buttonColor {
     /* TODO: ADJUST COLORS AND PERCENTAGES TO SMOOTH OUT AND LOOK BETTER */
     0%    {background: #ef4756;}
@@ -19,6 +27,10 @@ body, html {
     100%  {background: #ef4756;}
 }
 
+@-webkit-keyframes cursorBlink {
+    from {opacity: 1;}
+    to   {opacity: 0;}
+}
 @keyframes cursorBlink {
     from {opacity: 1;}
     to   {opacity: 0;}
@@ -99,7 +111,9 @@ input {
     color: white;
     text-shadow: 1px 1px 3px grey;
     background: #E74C3C;
+    -webkit-animation: buttonColor 5s infinite;
     animation: buttonColor 5s infinite;
+    -webkit-transition: all 2s;
     transition: all 2s;
 }
 
@@ -107,6 +121,7 @@ input {
 	color: #fff;
     text-shadow: 1px 1px 2px black;
     background: orange;
+    -webkit-animation: none;
     animation: none;
 }
 
@@ -184,9 +199,16 @@ textarea {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
 }
 
 .mobile-image {
@@ -197,7 +219,8 @@ textarea {
 	width: 52%;
     /* TODO: CHANGE THIS TO MOVE WITH HERO IMAGE OR FADE ON SCROLL */
     position: absolute;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     bottom: -1px;
     right: -20px;
     z-index: 1000;
@@ -206,17 +229,11 @@ textarea {
 h1 {
     font-size: 4em;
     color: #fff;
-/*    font-family: 'Open Sans', sans-serif;*/
-/*    font-family: 'Oxygen', sans-serif;*/
-/*    font-family: 'Josefin Sans', sans-serif;*/
-/*    font-family: 'Poiret One', cursive;*/
-/*    font-family: 'Rock Salt', cursive;*/
     font-family: 'Monoton', cursive;
     font-weight: lighter;
     text-transform: uppercase;
     text-shadow: -2px 3px 3px #ef4756;
     letter-spacing: 2px;
-/*    line-height: 90%;*/
     margin-top: 10px;
 }
 
@@ -296,9 +313,16 @@ i {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
 }
 
 .cta-line {
