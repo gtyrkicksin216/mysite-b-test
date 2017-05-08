@@ -41,6 +41,83 @@ body, html {
 
 /* ==== GLOBAL STYLES ==== */
 
+.menu-inner {
+    margin: 0 auto;
+    z-index: 1001;
+    height: 250px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: -210px;
+    -webkit-transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+    transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+}
+
+.menu-inner ul {
+    list-style: none;
+    padding-top: 50px;
+    padding-left: 0;
+}
+
+.menu-inner li {
+    margin: 20px 0;
+}
+
+.menu-inner li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    margin: 30px 0;
+}
+
+.menu-inner li a:hover {
+    font-weight: 600;
+}
+
+.menu-top {
+    position: fixed;
+    text-align: center;
+    z-index: 1001;
+    width: 100%;
+    top: 1px;
+    -webkit-transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+    transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+}
+
+#menu-button {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    border: none;
+    background: rgba(239,71,86,0.5);
+    bottom: 0;
+    outline: 0;
+}
+
+#menu-button:hover {
+	background: rgba(239,71,86,1)
+}
+
+#menu-button p {
+	margin: 0;
+    line-height: 80%;
+}
+
+.show {
+    top: -20px;
+    background: rgba(0,0,0,0.8);
+    -webkit-transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+    transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+}
+
+.button-show {
+    top: 235px;
+    -webkit-transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+    transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+}
+
 h2 {
     font-family: 'Poppins', sans-serif;
 }
