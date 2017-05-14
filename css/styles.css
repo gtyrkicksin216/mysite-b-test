@@ -246,6 +246,16 @@ input {
 	border-bottom: 5px solid black;
 }
 
+.thumbnail {
+    min-height: 800px;
+    border: none;
+    box-shadow: none;
+}
+
+.thumbnail p {
+	padding: 0 20px;
+}
+
 .modal-header {
     border: none;
     text-align: center;

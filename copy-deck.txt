@@ -10,3 +10,29 @@ With more and more visitors using mobile devices, having a site that is responsi
 Marketing:
 
 Do you already have a website that works for you, but you still need a way to grow your business. I will work with you to come up with a solution that fits your needs. From email campaigns to social media management, I offer options that will help you reach your goals.
+
+
+PORTFOLIO DESCRIPTIONS
+
+GlazenUrban:
+This is the home of GlazenUrban, a community development company in the heart of Cleveland. GlazenUrban focuses on funding businesses with a proven track record of success, that are ready to take things to the next level. GlazenUrban was founded by Alan Glazen who was involved Cleveland Hustles and now The Cleveland Chain Reaction on CNBC. There are parts of the site that I advised against (specifically the background image at the top due to quality issues), however the client wanted to move forward with the assets he provided.
+
+Fat Sunday:
+This site is also still under development. Fat Sunday is a meal prep service for individuals and families that are too busy to cook, but still want to eat healthy. I not only designed the site, but I also designed the logo as well. This was the first client site that I started working on. The development of this site was put on hold by the client in order to have me work on a logo for another business they own. That work has now been completed so the work on the site will continue shortly. This site is currently going to act as a customer facing marketing tool. Once the business scales, they will be looking to add online ordering and payment solutions right on the site.
+
+Zen Metro Spa:
+This site is still under development pending confirmation of certain things from the client (i.e. colors, photos, etc.). This site was built as a redesign of their current site (zenmetrospa.com). The current site is not responsive and not very user friendly. I am providing a responsive solution to ensure that no matter the device, their customers will still have an enjoyable experience on their site. I will also being adding an employee profile page. The employee profile page will be in the 'flip card' style, and it will give their customers a chance to 'meet' their stylist before even walking through the door.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
