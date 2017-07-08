@@ -25,6 +25,33 @@ $fontsack-2: 'Poppins', sans-serif;
 $main-font: 'Monoton', cursive;
 $accent-font: 'Rock Salt', cursive;
 
+//keyframes
+@-webkit-keyframes buttonColor {
+    /* TODO: ADJUST COLORS AND PERCENTAGES TO SMOOTH OUT AND LOOK BETTER */
+    0%    {background: #ef4756;}
+    25%   {background: orangered;}
+    50%   {background: orange;}
+    75%   {background: orangered;}
+    100%  {background: #ef4756;}
+}
+@keyframes buttonColor {
+    /* TODO: ADJUST COLORS AND PERCENTAGES TO SMOOTH OUT AND LOOK BETTER */
+    0%    {background: #ef4756;}
+    25%   {background: orangered;}
+    50%   {background: orange;}
+    75%   {background: orangered;}
+    100%  {background: #ef4756;}
+}
+
+@-webkit-keyframes cursorBlink {
+    from {opacity: 1;}
+    to   {opacity: 0;}
+}
+@keyframes cursorBlink {
+    from {opacity: 1;}
+    to   {opacity: 0;}
+}
+
 //MIXINS
 @mixin photo-content($file){
     content: url(../images/#{$file}.jpg)
