@@ -1,0 +1,417 @@
+//VARIABLES
+
+//COLORS
+$reg-white: #fff;
+$pink-red: #ef4756;
+$o-red: orangered;
+$orange: orange;
+$maroon-50: rgba(239,71,86,0.5);
+$maroon-100: rgba(239,71,86,1);
+$btn-color: #e74c3c;
+$blk-80: rgba(0,0,0,0.8);
+$blk-100: black;
+$rich-black: #333;
+$grey-100: grey;
+$dk-grey: darkgrey;
+$fb-blue: #3b5998;
+
+$grey-shadow: 1px 1px 3px $grey-100;
+$blk-shadow: 1px 1px 2px $blk-100;
+$rp-shadow: -2px 3px 3px $pink-red;
+
+//FONTS
+$fontstack-1: 'Raleway', sans-serif;
+$fontsack-2: 'Poppins', sans-serif;
+$main-font: 'Monoton', cursive;
+$accent-font: 'Rock Salt', cursive;
+
+//MIXINS
+@mixin photo-content($file){
+    content: url(../images/#{$file}.jpg)
+}
+
+@mixin menuTransition {
+    -webkit-transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+    transition: 1.2s all cubic-bezier(0.18,-0.45, 0.55, 1.58);
+}
+
+@mixin buttonTransition {
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+
+@mixin flexVertCenter {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+}
+
+@mixin nrBgImage {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+//BEGIN STYLESHEET
+
+//GLOBAL STYLES
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    h2, label, input {
+        font-family: $fontsack-2;
+    }
+    label {
+        text-align: left;
+    }
+}
+
+.menu-inner {
+    margin: 0 auto;
+    z-index: 1001;
+    height: 250px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: -210px;
+    @include menuTransition;
+    ul {
+        list-style: none;
+        padding-top: 50px;
+        padding-left: 0;
+    }//ul
+    li {
+        margin: 20px 0;
+        a {
+            color: $reg-white;
+            text-decoration: none;
+            font-weight: 500;
+            font-family: $fontstack-1;
+            font-size: 2em;
+            margin: 30px 0;
+            &:hover {
+                font-weight: 600;
+            }//hover
+        }//a
+    }//li
+}//.menu-inner
+
+.menu-top {
+    position: fixed;
+    text-align: center;
+    z-index: 1001;
+    width: 100%;
+    top: 1px;
+    @include menuTransition;
+}
+
+#menu-button {
+    margin: 0 auto;
+    text-align: center;
+    color: $reg-white;
+    background: $maroon-50;
+    &:hover {
+        background: $maroon-100;
+    }
+    p {
+        margin: 0;
+        line-height: 80%;
+    }
+}
+
+.show {
+    top: 20px;
+    background: $blk-80;
+    @include menuTransition;
+}
+
+.button-show {
+    top: 235px;
+    @include menuTransition;
+}
+
+.nav-pills {
+    background: none;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    color: $reg-white;
+    &:link {
+        font-family: $fontsack-2;
+        color: $reg-white;
+        background: none;
+    }
+    &:active, &:visited {
+        background: none;
+        color: $pink-red;
+    }
+}
+
+//TODO: FIGURE OUT LINES 148, 166, 173
+
+.btn-default {
+    margin: 10px 0;
+    padding: 25px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: $reg-white;
+    text-shadow: $grey-shadow;
+    background: $btn-color;
+    //FIGURE OUT ANIMATIONS WITH KEYFRAMES INSIDE OF MIXINS
+    @include buttonTransition;
+    &:hover {
+        color: $reg-white;
+        text-shadow: $blk-shadow;
+        background: $orange;
+        -webkit-animation: none;
+        animation: none;
+    }
+    &:active, &:visited {
+        color: $reg-white;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-success {
+    background: $pink-red;
+    border: none;
+    font-size: .8em;
+    min-height: 50px;
+    &:hover {
+        background: $pink-red;
+    }
+}
+
+.glyphicon-send {
+    color: $reg-white;
+}
+
+.navbar-inverse {
+    background: $pink-red;
+    z-index: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.lineUnder {
+    padding-bottom: 1px;
+    border-bottom: 5px solid $blk-100;
+}
+
+.thumbnail {
+    min-height: 800px;
+    border: none;
+    box-shadow: none;
+    p {
+        padding: 0 20px;
+    }
+}
+
+.modal-header {
+    border: none;
+    text-align: center;
+}
+
+.input-group-addon {
+    background: $pink-red;
+    border: $pink-red;
+    color: $reg-white;
+}
+
+textarea {
+    resize: none;
+    font-family: $fontsack-2;
+}
+
+//CUSTOM STYLES
+#hero {
+    height: 100vh;
+    @include photo-content('bg5');
+    @include nrBgImage;
+    @include flexVertCenter;
+}
+
+.mobile-image {
+    display: none;
+}
+
+#heroImage {
+    width: 52%;
+    position: absolute;
+    bottom: -1px;
+    right: -20px;
+    z-index: 1000;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+}
+
+h1 {
+    font-size: 4em;
+    color: $reg-white;
+    font-family: $main-font;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-shadow: $pink-red;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+h3 {
+    font-family: $accent-font;
+    color: $reg-white;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+section {
+    padding: 100px 0;
+    h2 {
+        font-family: $fontsack-2;
+        font-weight: 500;
+        text-align: center;
+    }
+    p {
+        text-align: left;
+        line-height: 150%;
+        font-family: $fontstack-1;
+    }
+}
+
+.services {
+    text-align: center;
+    padding: 30px 20px;
+    h2 {
+        padding-bottom: 10px;
+    }
+}
+
+i {
+    font-size: 2em;
+    color: $pink-red;
+}
+
+.parallax {
+    height: 300px;
+    background-attachment: fixed;
+    @include nrBgImage;
+}
+//CHECK HOW TO USE INTERPOLATION FOR BG IMAGE
+#p1 {
+    @include photo-content('plax-1-opt');
+}
+
+#p2 {
+    @include photo-content('bg2-opt');
+}
+
+#portfolio {
+    h3 {
+        color: $rich-black;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: $fontsack-2;
+    }
+}
+
+.blinker {
+    //TODO: add keyframes for all animations
+    animation: cursorBlink .8s infinite;
+}
+
+#contact {
+    height: 100%;
+    min-height: 500px;
+    @include photo-content('bg5');
+    @include nrBgImage;
+    @include flexVertCenter;
+    p {
+        text-align: center;
+    }
+    i {
+        margin: 0 10px;
+        padding: 0;
+        color: $dk-grey
+    }
+    //TODO: FIGURE OUT LINES 432-438
+}
+
+.cta-line {
+    color: $reg-white;
+    font-family: $fontsack-2;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+
+//MEDIA QUERIES
+
+@media only screen and (max-width: 767px){
+    .mobile-image {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #heroImage {
+        display: none;
+    }
+    
+    .btn-default {
+        font-size: 1em;
+    }
+
+    #p1, #p2 {
+        background-attachment: scroll;
+    }
+
+}
+
+//LANDSCAPE ISSUE FIX
+@media (min-width: 700px) and (orientation: landscape){
+    #hero {
+        min-height: 520px;
+    }
+}
+
+.help {
+    font-size: 1em;
+    color: $reg-white;
+}
+
+@media only screen and (max-width: 765px){
+    #hero {
+        min-height: 520px;
+    }
+}
+
+footer {
+    margin: 0 auto;
+    border-radius: none;
+    padding: 5px 0;
+    color: $reg-white;
+    text-align: center;
+    p {
+        margin: 0;
+        font-family: $fontsack-2;
+        font-size: .8em;
+        font-weight: 600;
+    }
+}
