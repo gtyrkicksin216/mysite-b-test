@@ -53,6 +53,10 @@ $accent-font: 'Rock Salt', cursive;
 }
 
 //MIXINS
+
+//Possible keyframe mixin option
+@mixin 
+
 @mixin photo-content($file){
     content: url(../images/#{$file}.jpg)
 }
